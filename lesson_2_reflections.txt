@@ -1,0 +1,20 @@
+What happens when you initialize a repository? Why do you need to do it?
+Ao iniciar um repositório Git é criado instantaneamente um diretório oculto, chamado ".git". O qual armazena os metadados do novo repositório, ou seja, o histórico de commits e portanto as versões dos arquivos contidos no repositório.
+
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+A área de preparação fornece uma etapa intermediária de controle entre o diretório de trabalho e o repositório. Possibilitando assim um controle mais fino sobre o que deve ou não pertencer a um commit. Desta forma cada commit se torna ainda mais delimitado a conter apenas uma alteração lógica, o que permite rastrear ainda mais eficientemente modificações no histórico de versões dos arquivos.
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+How do the diagrams help you visualize the branch structure?
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+manually?
