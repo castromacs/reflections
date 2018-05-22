@@ -7,14 +7,19 @@ A área de preparação fornece uma etapa intermediária de controle entre o dir
 
 How can you use the staging area to make sure you have one commit per logical
 change?
+Através da comparação do diretório de trabalho e da área de preparação, bem como desta com o repositório, é possível identificar as modificações introduzidas facilmente. O que permite separar e limitar cada commit a uma alteração lógica.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+Os branches podem e devem ser usados quando se busca fazer uma versão alternativa do repositório, testando alguma alteração grande que irá afetar muitos arquivos ou alguma nova funcionalidade que poderá ser fundida posteriormente ao branch master. O interessante é notar que desta forma é possível manter o branch master sempre funcional, ao passo que ramos alternativos podem ser criados para o desenvolvimento e experimentação.
 
 How do the diagrams help you visualize the branch structure?
+Os diagramas ajudam a entender a estrutura geral dos branches, onde eles se ramificaram e portanto quais alterações eles devem ou não compartilhar.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
+Como resultado da mesclagem de dois branches obtemos um único branch, o qual é nomeado de acordo com o branch em que se fez checkout por último. O branch resultante contem o histórico de commits dos dois branches fundidos (ou 3) e estes commits podem inclusive estar intercalados, já que são organizados de acordo com a ordem em que foram feitos. Para evitar confusão pode-se utilizar o comando git show <commit id> para se visualizar as diferenças entre um commit e o commit "pai", já que após a fusão dois commits consecutivos não necessariamente são "pai" e "filho".
 
-What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+What are the pros and cons of Git automatic merging vs. always doing merges
 manually?
+A vantagem do Git requisitar a resolução de conflitos quando a mesma seção de um arquivo foi alterada nos dois branches, é que evita-se a formação de um código sem sentido, dado que as modicações podem ser incompatíveis. No restante das situações o Git funde automaticamente aumentando a eficiência e fluidez do trabalho.
